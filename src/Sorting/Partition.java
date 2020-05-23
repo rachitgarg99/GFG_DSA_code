@@ -63,12 +63,39 @@ public class Partition {
 
     }
 
+    public static int hoarePartition(int[] arr,int l,int h){
+
+        int pivot=arr[l];
+        int i=l-1;
+        int j=h+1;
+        while(true){
+
+            do{
+                i++;
+            }while(arr[i]<pivot);
+
+            do{
+                j--;
+            }while(arr[j]>pivot);
+
+            if(i>=j){
+                return j;
+            }
+            int temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+
+
+        }
+
+    }
+
 
 
     public static void main(String[] args){
         int[] arr1={11,3,30,5,377,200,2,99};
         int[] arr2={11,3,30,5,377,200,2,99,9};
-
+        int[] arr3={11,3,30,5,377,200,2,99,9};
         naivePivot(arr1,0,arr1.length-1,2);
 
         System.out.println(Arrays.toString(arr1));
@@ -76,6 +103,10 @@ public class Partition {
         lomutoPartition(arr2,0,arr2.length-1);
 
         System.out.println(Arrays.toString(arr2));
+
+        System.out.println(hoarePartition(arr3,0,arr3.length-1));
+
+        System.out.println(Arrays.toString(arr3));
 
     }
 }
