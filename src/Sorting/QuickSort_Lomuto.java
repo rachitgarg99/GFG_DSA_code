@@ -10,28 +10,18 @@ public class QuickSort_Lomuto {
         int temp;
         int i=l-1;
         for(int j=l;j<=h;j++){
-
-
-            if(arr[j]<pivot){
+            if(arr[j]<pivot) {
                 i++;
-                temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
-
-
         }
-
-
         i++;
         temp=arr[h];
         arr[h]=arr[i];
         arr[i]=temp;
-
         return i;
-
-
     }
 
     public static void qSort(int[] arr, int l,int h){
@@ -46,10 +36,9 @@ public class QuickSort_Lomuto {
 
     public static void main(String[] args){
 
-        int[] arr={11,3,30,5,377,200,2,99};
-
+        int[] arr2={11,3,30,5,377,200,2,99};
+        int[] arr={-11,0,30,5,-377,200,-2,99};
         qSort(arr,0,arr.length-1);
-
         System.out.println(Arrays.toString(arr));
 
     }
