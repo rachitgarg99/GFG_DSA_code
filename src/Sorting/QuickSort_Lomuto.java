@@ -17,6 +17,7 @@ public class QuickSort_Lomuto {
                 arr[j] = temp;
             }
         }
+
         i++;
         temp=arr[h];
         arr[h]=arr[i];

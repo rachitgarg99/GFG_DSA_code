@@ -15,7 +15,7 @@ public class KthBitSet {
 
     public static void main(String args[]){
 
-        KthBit(5,2);
+        KthBit(5,8);
     }
 
 }

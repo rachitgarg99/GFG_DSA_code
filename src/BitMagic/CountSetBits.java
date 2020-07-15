@@ -4,6 +4,19 @@ public class CountSetBits {
 
     static int[] table=new int[256];
 
+    static int method0(int n){
+
+        int res=0;
+
+        while(n>0){
+            if(n%2!=0){
+                res++;
+            }
+            n/=2;
+        }
+    return res;
+    }
+
     static int method1(int n){
         int res=0;
         while(n>0){
@@ -47,6 +60,7 @@ public class CountSetBits {
 
     public static void main(String[] args){
         initialize();
+        System.out.println(method0(14));
         System.out.println(method1(14));
         System.out.println(method2(14));
         System.out.println(count(14));
