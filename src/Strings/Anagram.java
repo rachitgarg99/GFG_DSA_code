@@ -9,15 +9,15 @@ public class Anagram {
         if(str1.length()!=str2.length())
             return false;
 
-
-
-        for(int i=0;i< str1.length();i++){
-
-            count[str1.charAt(i)]++;
-        }
+//
+//
+//        for(int i=0;i< str1.length();i++){
+//
+//
+//        }
 
         for(int i=0;i<str2.length();i++){
-
+            count[str1.charAt(i)]++;
             count[str2.charAt(i)]--;
         }
 
