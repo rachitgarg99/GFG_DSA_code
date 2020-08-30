@@ -33,7 +33,7 @@ public class KMPPatternSearch {
     public static void KMPSearch(String str,String pat){
 
         int n=str.length();
-        int m=str.length();
+        int m=pat.length();
         int[] lps=new int[m];
 
         fillLPS(pat,lps);
@@ -62,10 +62,12 @@ public class KMPPatternSearch {
 
     }
 
-//    public static void main(String[] args){
-//
-//        String txt="abab";
-//
-//    }
+    public static void main(String[] args){
+
+        String txt="ababaababaabbbbaaabababababbababbbababbbbbababba";
+        String pat="ababa";
+        KMPSearch(txt,pat);
+
+    }
 
 }
