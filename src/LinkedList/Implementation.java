@@ -1,59 +1,58 @@
 package LinkedList;
 
+
+
 class LList{
 
-     class Node{
-
+    class Node{
         int data;
         Node next;
-
         Node(int d){
-            data=d;
+            this.data=d;
         }
     }
 
-
     Node head;
-    void insertBegin(int x){
-        Node temp=new Node(x);
-        temp.next=head;
-        head=temp;
+
+    public void insertBeg(int d){
+        Node new_node=new Node(d);
+        new_node.next=head;
+        head=new_node;
     }
 
-    void printList(){
+    public void printList(){
         Node curr=head;
         while(curr!=null){
-            System.out.print(curr.data+" ");
+            System.out.println(curr.data);
+            //System.out.println(curr.next);
             curr=curr.next;
         }
     }
 
-    void insertEnd(int x){
-        Node temp=new Node(x);
-        if(head==null){
-            head=temp;
-            return;
-        }
+    public void insertEnd(int d){
+        Node nNode=new Node(d);
         Node curr=head;
         while(curr.next!=null){
             curr=curr.next;
         }
-        curr.next=temp;
-
+        curr.next=nNode;
     }
 
-    //public class Implementation {
 
-    public static void main(String[] args){
-
-        LList l=new LList();
-
-        l.insertBegin(15);
-        l.insertBegin(5);
-        l.insertBegin(20);
-        l.insertEnd(55);
-        l.printList();
-    }
 
 }
 
+class Implementation {
+
+    public static void main(String[] args){
+
+        LList l1=new LList();
+
+        l1.insertBeg(10);
+        l1.insertBeg(20);
+        l1.insertBeg(30);
+        l1.insertEnd(66);
+        l1.printList();
+    }
+
+}

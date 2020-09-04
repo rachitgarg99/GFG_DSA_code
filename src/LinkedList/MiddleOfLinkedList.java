@@ -51,6 +51,23 @@ class LList1{
         }
         System.out.println(slow.data);
     }
+
+
+    public void printMiddle(){
+        //Node cur=head;
+        if(head==null){
+            System.out.println("");
+            return;
+        }
+        Node slow=head,fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
+        }
+
+         System.out.println(slow.data);
+
+    }
 }
 
 
@@ -73,7 +90,7 @@ public class MiddleOfLinkedList {
         l.insertEnd(99);
         l.insertEnd(57);
         l.printList();
-        l.middleElement();
+        l.printMiddle();
     }
 }
 

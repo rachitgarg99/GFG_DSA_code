@@ -67,7 +67,7 @@ public class KMPLspArray {
 
     public static void main(String[] args){
 
-        String str="AAABAAAAC";
+        String str="qgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbqqqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbbqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbqqqgqbqgqlqjqgvqgqbqwqgdqgqbqiqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbqqqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbbqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqmqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbqqqgqbqgqlqjqgvqgqbqwqgdqgqbqgtqgqbqgqlqjqgvqgqbqwqgdqgqbqgqlqjqgvqgqbqqqgqbqgqlqjqgvqgq";
 
         int n=str.length();
 

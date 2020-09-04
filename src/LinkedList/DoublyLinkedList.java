@@ -1,22 +1,28 @@
 package LinkedList;
 
-public class DoublyLinkedList {
 
-    Node head;
+
+class DLL{
 
     class Node{
-        int data;
-        Node prev;
-        Node next;
 
+        Node prev;
+        int data;
+        Node next;
         Node(int d){
             data=d;
         }
     }
 
-    //void
 
 
 
+}
+
+public class DoublyLinkedList {
+
+    public static void main(String[] args){
+
+    }
 
 }
