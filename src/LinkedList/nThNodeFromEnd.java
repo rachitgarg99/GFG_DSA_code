@@ -60,6 +60,36 @@ public class nThNodeFromEnd {
 
         }
 
+        /** Effective Method designed by me by the help of the above strategy */
+
+        void printNthElement(int n){
+            if(head==null){
+                return;
+            }
+            Node first=head;
+            Node second = null;
+            int count=0;
+            while(first!=null){
+
+                if(count==n){
+                    second=head;
+                }
+                if(count>n){
+                    if(second!=null) {
+                        second = second.next;
+                    }
+                    else{
+                        return;
+                    }
+                }
+                count++;
+                first=first.next;
+            }
+            assert second != null;
+            System.out.println(second.data);
+
+        }
+
 
     }
     public static void main(String[] args){
@@ -74,7 +104,8 @@ public class nThNodeFromEnd {
         l.insertEnd(40);
         l.printList();
         l.printNthEnd(4);
-
+        l.printNthElement(2);
+        l.printNthElement(4);
 
 
     }
